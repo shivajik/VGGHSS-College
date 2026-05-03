@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "_I2Vak-zJft0MXOvcWHdS"
+uri = "file://artifacts/school-website/public/hero-campus.png"
+type = "image"
+title = "School Campus Hero Image"
+
+[[generated]]
+id = "rJMR_ePXJbfpW5z7IWKnI"
+uri = "file://artifacts/school-website/public/gallery-sports.png"
+type = "image"
+title = "Students playing sports"
+
+[[generated]]
+id = "XTDm5j9EdmkljAxgWS0OI"
+uri = "file://artifacts/school-website/public/gallery-classroom.png"
+type = "image"
+title = "Students in classroom"
+
+[[generated]]
+id = "tSiwOcEgR-21l4IrFjOGo"
+uri = "file://artifacts/school-website/public/gallery-lab.png"
+type = "image"
+title = "Science lab experiment"
+
+[[generated]]
+id = "koZK7tH3t-7WL3omz6w76"
+uri = "file://artifacts/school-website/public/gallery-cultural.png"
+type = "image"
+title = "Cultural event stage"
