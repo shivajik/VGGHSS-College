@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "npm install -g pnpm@10 && pnpm install --no-frozen-lockfile --ignore-workspace --prefix artifacts/school-website",
+  "installCommand": "npm install -g pnpm@10 && cd artifacts/school-website && pnpm install --no-frozen-lockfile --ignore-workspace",
   "buildCommand": "cd artifacts/school-website && pnpm run build",
   "outputDirectory": "artifacts/school-website/dist/public",
   "framework": null,
