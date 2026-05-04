@@ -4,7 +4,8 @@
     "outDir": "dist",
     "rootDir": "src",
     "types": ["node"],
-    "composite": false   // 👈 ADD THIS
+    "composite": false,
+    "noEmitOnError": false
   },
   "include": ["src"]
 }
