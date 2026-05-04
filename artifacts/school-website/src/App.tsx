@@ -13,6 +13,7 @@ import Courses from "@/pages/courses";
 import Achievements from "@/pages/achievements";
 import Gallery from "@/pages/gallery";
 import Contact from "@/pages/contact";
+import Staff from "@/pages/staff";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ function Router() {
         <Route path="/courses" component={Courses} />
         <Route path="/achievements" component={Achievements} />
         <Route path="/gallery" component={Gallery} />
+        <Route path="/staff" component={Staff} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>

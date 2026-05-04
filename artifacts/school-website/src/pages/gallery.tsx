@@ -8,93 +8,29 @@ const fadeUp: Variants = {
   visible: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" } }),
 };
 
-const categories = ["All", "Campus", "Sports", "Events", "Cultural", "Academic"];
+const categories = ["All", "Campus", "Events", "Activities"];
 
 const galleryItems = [
-  {
-    id: 1,
-    title: "School Main Building",
-    category: "Campus",
-    bg: "from-emerald-400 to-green-600",
-    desc: "Our heritage school building in Gaikwaad Jalgaon",
-  },
-  {
-    id: 2,
-    title: "Annual Sports Day",
-    category: "Sports",
-    bg: "from-lime-400 to-emerald-600",
-    desc: "Students competing in track and field events",
-  },
-  {
-    id: 3,
-    title: "Science Lab",
-    category: "Academic",
-    bg: "from-teal-400 to-cyan-600",
-    desc: "Students conducting experiments in our science lab",
-  },
-  {
-    id: 4,
-    title: "Cultural Evening",
-    category: "Cultural",
-    bg: "from-green-400 to-teal-600",
-    desc: "Annual cultural festival performances",
-  },
-  {
-    id: 5,
-    title: "Kabaddi Championship",
-    category: "Sports",
-    bg: "from-emerald-500 to-green-700",
-    desc: "District Kabaddi championship winners 2024",
-  },
-  {
-    id: 6,
-    title: "Independence Day",
-    category: "Events",
-    bg: "from-lime-500 to-emerald-700",
-    desc: "Republic Day flag hoisting ceremony",
-  },
-  {
-    id: 7,
-    title: "Computer Lab",
-    category: "Academic",
-    bg: "from-teal-500 to-green-700",
-    desc: "Students learning digital skills in our computer lab",
-  },
-  {
-    id: 8,
-    title: "Annual Prize Distribution",
-    category: "Events",
-    bg: "from-green-500 to-lime-700",
-    desc: "Celebrating our achievers at the annual prize ceremony",
-  },
-  {
-    id: 9,
-    title: "School Garden",
-    category: "Campus",
-    bg: "from-emerald-400 to-lime-600",
-    desc: "Our green campus and botanical garden",
-  },
-  {
-    id: 10,
-    title: "Drama Performance",
-    category: "Cultural",
-    bg: "from-teal-400 to-emerald-600",
-    desc: "Award-winning one-act play performance",
-  },
-  {
-    id: 11,
-    title: "Cricket Team",
-    category: "Sports",
-    bg: "from-lime-400 to-green-600",
-    desc: "District cricket tournament champions",
-  },
-  {
-    id: 12,
-    title: "Classroom Learning",
-    category: "Academic",
-    bg: "from-green-400 to-teal-600",
-    desc: "Engaged learning in our classrooms",
-  },
+  { id: 1, title: "School Campus View", category: "Campus", src: "https://vgghss.com/wp-content/uploads/2022/11/Vgg1-2.jpeg", desc: "Our school campus in Gaikwaad Jalgaon" },
+  { id: 2, title: "School Building", category: "Campus", src: "https://vgghss.com/wp-content/uploads/2022/11/Vgg1-4.jpeg", desc: "Main school building" },
+  { id: 3, title: "Campus Grounds", category: "Campus", src: "https://vgghss.com/wp-content/uploads/2022/11/Vgg1-5.jpeg", desc: "Open grounds for students" },
+  { id: 4, title: "School Activity", category: "Activities", src: "https://vgghss.com/wp-content/uploads/2022/11/Vgg1-6.jpeg", desc: "Students participating in school activity" },
+  { id: 5, title: "Student Gathering", category: "Events", src: "https://vgghss.com/wp-content/uploads/2022/11/Vgg1-9.jpeg", desc: "Annual student gathering" },
+  { id: 6, title: "School Function", category: "Events", src: "https://vgghss.com/wp-content/uploads/2022/11/Vgg1-10.jpeg", desc: "School function moments" },
+  { id: 7, title: "Academic Block", category: "Campus", src: "https://vgghss.com/wp-content/uploads/2022/11/Vgg1-1.jpeg", desc: "Academic building view" },
+  { id: 8, title: "Cultural Event", category: "Events", src: "https://vgghss.com/wp-content/uploads/2022/11/Vgg1-8.jpeg", desc: "Cultural event at school" },
+  { id: 9, title: "School Activities", category: "Activities", src: "https://vgghss.com/wp-content/uploads/2022/11/Vgg1-7.jpeg", desc: "Student activities" },
+  { id: 10, title: "Om Shivkrupa Trust", category: "Events", src: "https://vgghss.com/wp-content/uploads/2020/10/om_shivkrupa-1.jpeg", desc: "Trust event" },
+  { id: 11, title: "Trust Programme", category: "Events", src: "https://vgghss.com/wp-content/uploads/2020/10/om_shivkrupa-11.jpeg", desc: "Trust programme highlights" },
+  { id: 12, title: "Felicitation", category: "Events", src: "https://vgghss.com/wp-content/uploads/2020/10/om_shivkrupa-15.jpeg", desc: "Felicitation moments" },
+  { id: 13, title: "Annual Function", category: "Events", src: "https://vgghss.com/wp-content/uploads/2020/10/om_shivkrupa-16.jpeg", desc: "Annual function" },
+  { id: 14, title: "Community Programme", category: "Events", src: "https://vgghss.com/wp-content/uploads/2020/10/om_shivkrupa-20.jpeg", desc: "Community engagement" },
+  { id: 15, title: "School Programme", category: "Events", src: "https://vgghss.com/wp-content/uploads/2020/10/om_shivkrupa-22.jpeg", desc: "School programme" },
+  { id: 16, title: "Cultural Day", category: "Events", src: "https://vgghss.com/wp-content/uploads/2020/10/om_shivkrupa-24.jpeg", desc: "Cultural day" },
+  { id: 17, title: "Award Ceremony", category: "Events", src: "https://vgghss.com/wp-content/uploads/2020/10/om_shivkrupa-25.jpeg", desc: "Award ceremony" },
+  { id: 18, title: "School Memories", category: "Activities", src: "https://vgghss.com/wp-content/uploads/2020/10/11.jpg", desc: "Treasured school memories" },
+  { id: 19, title: "Campus Life", category: "Activities", src: "https://vgghss.com/wp-content/uploads/2020/10/22.jpg", desc: "Daily campus life" },
+  { id: 20, title: "Group Photo", category: "Activities", src: "https://vgghss.com/wp-content/uploads/2020/10/33.jpeg", desc: "Group photograph" },
 ];
 
 export default function Gallery() {
@@ -154,15 +90,11 @@ export default function Gallery() {
             {filtered.map((item, i) => (
               <motion.div
                 key={item.id}
-                className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer"
+                className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-muted"
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i * 0.05}
                 onClick={() => setLightbox(item)}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.bg} opacity-80`} />
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <Camera className="h-12 w-12 text-white/60" />
-                  <span className="text-white/80 text-sm mt-2 font-medium">{item.category}</span>
-                </div>
+                <img src={item.src} alt={item.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-105" />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                   <p className="text-white font-bold mb-1">{item.title}</p>
                   <p className="text-white/70 text-xs leading-relaxed">{item.desc}</p>
@@ -192,8 +124,8 @@ export default function Gallery() {
             className="bg-white rounded-2xl overflow-hidden max-w-lg w-full"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className={`h-64 bg-gradient-to-br ${lightbox.bg} relative`}>
-              <Camera className="absolute inset-0 m-auto h-20 w-20 text-white/40" />
+            <div className="h-72 relative bg-muted">
+              <img src={lightbox.src} alt={lightbox.title} className="absolute inset-0 w-full h-full object-cover" />
               <button
                 className="absolute top-4 right-4 h-8 w-8 bg-black/30 rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-colors"
                 onClick={() => setLightbox(null)}

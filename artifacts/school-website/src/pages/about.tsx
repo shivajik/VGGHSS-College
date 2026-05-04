@@ -162,8 +162,8 @@ export default function About() {
           </motion.div>
           <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
             {[
-              { img: "/leadership/president.jpg", name: "Mr. Ashokraoji Gangadhar Gaikwad", role: "President", qual: "B.Sc., D.L.L.&W., L.L.B., M.B.A." },
-              { img: "/leadership/secretary.jpg", name: "Prof. Nandkishore Gangadhar Gaikwad", role: "Secretary", qual: "M.Sc., M.Ed." },
+              { img: "https://vgghss.com/wp-content/uploads/2020/10/A_G_Gaikwad.jpg", name: "Mr. Ashokraoji Gangadhar Gaikwad", role: "President", qual: "B.Sc., D.L.L.&W., L.L.B., M.B.A." },
+              { img: "https://vgghss.com/wp-content/uploads/2020/10/N_G_Gaikwad_Sir.jpg", name: "Prof. Nandkishore Gangadhar Gaikwad", role: "Secretary", qual: "M.Sc., M.Ed." },
             ].map((p, i) => (
               <motion.div key={p.name} className="bg-white rounded-2xl border border-border overflow-hidden" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
                 <img src={p.img} alt={p.name} className="w-full h-72 object-cover object-top" loading="lazy" />
