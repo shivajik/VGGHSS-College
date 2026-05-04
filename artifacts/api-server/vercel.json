@@ -2,5 +2,14 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm install -g pnpm@10 && pnpm install --no-frozen-lockfile --ignore-workspace",
-  "buildCommand": "echo 'no build needed for serverless express'"
+  "buildCommand": "echo 'no build step - serverless function'",
+  "outputDirectory": "public",
+  "functions": {
+    "api/index.ts": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
 }
