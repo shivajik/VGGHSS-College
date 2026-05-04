@@ -1,15 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "npm install -g pnpm@10 && pnpm install --no-frozen-lockfile --ignore-workspace",
-  "buildCommand": "echo 'no build step - serverless function'",
-  "outputDirectory": "public",
-  "functions": {
-    "api/index.ts": {
-      "maxDuration": 30
-    }
-  },
+  "installCommand": "npm install -g pnpm@10 && cd ../school-website && pnpm install --no-frozen-lockfile --ignore-workspace",
+  "buildCommand": "cd ../school-website && pnpm run build && mkdir -p ../api-server/dist && cp -r dist/public/* ../api-server/dist/",
+  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
