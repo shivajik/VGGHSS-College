@@ -151,6 +151,66 @@ export default function About() {
         </div>
       </section>
 
+      {/* Leadership */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <Badge className="mb-4">Leadership</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "var(--app-font-display)" }}>
+              Our Trustees
+            </h2>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+            {[
+              { img: "/leadership/president.jpg", name: "Mr. Ashokraoji Gangadhar Gaikwad", role: "President", qual: "B.Sc., D.L.L.&W., L.L.B., M.B.A." },
+              { img: "/leadership/secretary.jpg", name: "Prof. Nandkishore Gangadhar Gaikwad", role: "Secretary", qual: "M.Sc., M.Ed." },
+            ].map((p, i) => (
+              <motion.div key={p.name} className="bg-white rounded-2xl border border-border overflow-hidden" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+                <img src={p.img} alt={p.name} className="w-full h-72 object-cover object-top" loading="lazy" />
+                <div className="p-6 text-center">
+                  <Badge className="mb-2">{p.role}</Badge>
+                  <h3 className="font-bold text-foreground">{p.name}</h3>
+                  <p className="text-sm text-muted-foreground mt-1">{p.qual}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl border border-border overflow-hidden">
+            <div className="p-6 border-b border-border">
+              <h3 className="font-bold text-foreground" style={{ fontFamily: "var(--app-font-display)" }}>Executive Committee</h3>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="bg-muted/50 text-muted-foreground">
+                  <tr>
+                    <th className="text-left p-4 font-medium">Member</th>
+                    <th className="text-left p-4 font-medium">Qualification</th>
+                    <th className="text-left p-4 font-medium">Designation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Mr. Ashokraoji G. Gaikwad", "B.Sc., D.L.L.&W., L.L.B., M.B.A.", "President"],
+                    ["Mr. Nitinrao K. Naiknaware", "M.Sc., B.Ed.", "Vice President"],
+                    ["Mr. Nandkishor G. Gaikwad", "M.Sc., M.Ed.", "Secretary"],
+                    ["Mrs. Alka N. Gaikwad", "M.A., B.P.Ed.", "Treasurer"],
+                    ["Mrs. Mrunalini A. Gaikwad", "M.A.", "Member"],
+                    ["Mrs. Sangita R. Gaikwad", "M.A.", "Member"],
+                    ["Mr. Shivajirao T. Dhage", "—", "Member"],
+                  ].map((row) => (
+                    <tr key={row[0]} className="border-t border-border">
+                      <td className="p-4 font-medium text-foreground">{row[0]}</td>
+                      <td className="p-4 text-muted-foreground">{row[1]}</td>
+                      <td className="p-4 text-muted-foreground">{row[2]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Timeline */}
       <section className="py-24 bg-foreground text-white">
         <div className="container mx-auto px-4 md:px-6">
