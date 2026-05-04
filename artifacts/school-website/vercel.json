@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm --filter @workspace/school-website... install && pnpm --filter @workspace/school-website run build",
+  "installCommand": "npm install -g pnpm@10 && pnpm install --no-frozen-lockfile --ignore-workspace",
+  "buildCommand": "pnpm run build",
   "outputDirectory": "dist/public",
-  "installCommand": "npm install -g pnpm@9 && pnpm install --filter @workspace/school-website...",
   "framework": null,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
