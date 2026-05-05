@@ -1,6 +1,25 @@
 import { motion, type Variants } from "framer-motion";
-import { BookOpen, Heart, Target, Users, Star, Award, ShieldCheck } from "lucide-react";
+import { BookOpen, Heart, Target, Users, Star, Award, ShieldCheck, Camera, Trees, FlameKindling, FlaskConical, Volleyball, Apple, Sparkles, Microscope, UserCheck, MessageCircle, ShieldAlert, Activity, Globe2, BarChart3, Wifi, Scale } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+
+const secondaryFeatures = [
+  { icon: Trees, title: "Lush Green Campus", desc: "A naturally rich environment for oxygen, mental balance, and inner strength — the entire campus is wrapped in greenery." },
+  { icon: Camera, title: "CCTV Surveillance", desc: "The campus is monitored by CCTV cameras to ensure that no untoward incident takes place." },
+  { icon: FlameKindling, title: "Fire Safety", desc: "A functional fire-fighting system is installed in the school building, which is open and easy to evacuate." },
+  { icon: UserCheck, title: "Trained Faculty", desc: "Highly qualified, trained teachers conduct every class — knowledge transfer is our central duty." },
+  { icon: FlaskConical, title: "Labs & Library", desc: "Well-equipped science laboratories, library, computer lab and projector room support all-round development." },
+  { icon: Volleyball, title: "Sports Ground", desc: "A spacious playground supports athletes aiming for state and national-level competitions." },
+  { icon: Apple, title: "Mid-day Meal", desc: "Government-approved nutritious meals served daily — teachers manage it as their own responsibility." },
+  { icon: Sparkles, title: "Scholarship Support", desc: "Merit, Suvarnamahotsavi, Savitribai Phule, NMMS and EBC scholarships disbursed via Government DBT." },
+  { icon: Microscope, title: "INSPIRE Award", desc: "Students are encouraged to participate in INSPIRE Award to nurture their scientific and research mindset." },
+  { icon: MessageCircle, title: "PTA & SMC", desc: "Active School Management Committee and Parent–Teacher Association meet regularly to address concerns." },
+  { icon: ShieldAlert, title: "Vishakha Committee", desc: "A Women's Grievance Redressal (Vishakha) Committee ensures a safe, confident environment for girls and female staff." },
+  { icon: Activity, title: "Yoga & Health Camps", desc: "Regular yoga camps and student health check-up camps are organised throughout the year." },
+  { icon: Globe2, title: "Govt. Schemes", desc: "All Government schemes related to school students are communicated and implemented for beneficiaries." },
+  { icon: BarChart3, title: "90%+ Results", desc: "Average school result from 2020 to 2023 has been above 90%, with a goal to push it higher every year." },
+  { icon: Wifi, title: "Digital Records", desc: "Funds, grants and operations are tracked through computerised systems linked with Government portals." },
+  { icon: Scale, title: "Transparent & Compliant", desc: "Run as per the Secondary Schools Code and directives of the Education Officer and Block Officials." },
+];
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 32 },
@@ -211,7 +230,37 @@ export default function About() {
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Secondary Section — Objectives, Standards & Goals */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div className="text-center max-w-3xl mx-auto mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">Secondary Section</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3" style={{ fontFamily: "var(--app-font-display)" }}>
+              Objectives, Standards & Goals
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Late.Vimalbai Gangadhar Gaikwad Secondary &amp; Higher Secondary School was founded with the
+              sacred objective of imparting knowledge to the children of Gaikwad Jalgaon — a village still
+              not connected by State Transport buses. The school exists so that no child of this region is
+              left behind in education. Building generations of educated, confident citizens is our single
+              mission.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {secondaryFeatures.map((f, i) => (
+              <motion.div key={f.title} className="bg-muted/30 rounded-2xl p-5 border border-border hover:border-primary/30 hover:bg-primary/5 transition-all" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i * 0.05}>
+                <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
+                  <f.icon className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="font-semibold text-foreground text-sm mb-1.5">{f.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-foreground text-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
